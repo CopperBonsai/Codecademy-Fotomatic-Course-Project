@@ -1,0 +1,523 @@
+/* Universal Styles */
+* {
+  margin: 0 auto;
+}
+html {
+  font-family: "Roboto", serif;
+  font-size: 16px;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 900
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+
+.roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+
+.roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.damion-regular {
+  font-family: "Damion", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: #4a4a4a
+  font-family: "Roboto Mono", serif;
+  font-weight: 400;
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 0.25rem;
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: inline-flex; /*changed from block to display on same line*/
+  /*added to reduce size -don't know why it works*/
+  width: 100%;
+  /*course solution code:
+  display: block;
+  max-width: 100%;*/
+}
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 0.0625rem #c6c1c1;
+  background-color: #ffffff;
+  /*added*/
+  height: 5.3125rem;
+  /*course solution had
+  z-index: 100;*/
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.875rem;
+}
+
+header .logo {
+  flex: 1;
+  /*added but not in course solution*/
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  /*added but not in course solution*/
+  list-style-type: none;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+  /*added but not in course solution*/
+  text-decoration: none;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: .75rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }/*in solution is replaced with:
+   nav li:last-child {
+    display: block;}*/
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }/*is not included in solution*/
+
+  header .content {
+    padding: .5rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+
+  header .mobile .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: #ffffff;
+  }/*not included in solution*/
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  /*added*/
+  background-image: url('../images/banner-landingpage.jpg');
+  background-size: cover;
+  background-position: center;/*set to bottom in solution*/
+  background-repeat: no-repeat;
+}
+
+#sign-up-cta {
+  padding: 2rem 5rem 3.5rem 5rem;
+  border: solid 0.0625rem #979797;
+  border-radius: 0.25rem;
+  background-color: #9dc20b;
+  margin: 10.625rem auto 10.625rem 6.25rem;
+  /*course solution differences:
+  position: relative;
+  top: 10.6875rem;
+  left: 10%;
+  padding: 0 5rem 2.5rem 5rem;*/
+}
+
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+  /*added but not in solution*/
+  font-weight: 400;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+  /*added here but not in solution*/
+  font-weight: 300;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: .75rem;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+}
+
+@media only screen and (max-width: 760px) {
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+  }
+
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    /*added to center at lower sizes but not in solution*/
+    margin: auto;
+  }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 20rem;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: inline-flex;/*set to flex in solution*/
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background-color: #f3f3f3;
+}
+
+.feature {
+  flex: 1;
+  padding: 2rem;
+  margin: 0px 1.25rem;
+  background-color: #ffffff;
+}
+
+.feature .image-container {
+  /*width: 90%;
+  height: 65%; took out once I added 100% to .image-container img but not included in solution*/
+  margin: 0 0 2.5rem 0;/*changed from 0 auto but remains auto in course solution*/
+}
+
+/*course solution added this:
+.feature .content {
+  padding: 2.5rem 0;}*/
+
+.feature h2 {
+  padding-bottom: .5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+  /*added but not in solution*/
+  margin-bottom: 3.75rem;
+}
+
+@media only screen and (max-width: 890px/*is 895 in solution*/) {
+  /*solution added:
+  #features-section {
+    padding: 1rem;}
+    
+    .feature {
+    margin: 0 0.5rem;
+    padding: 1rem;}*/
+
+  .feature h2 {
+    font-size: 1.125rem;/*solution sets this at 2rem*/
+    line-height: 1.3;
+    font-weight: normal;/*not included in solution*/
+  }
+
+  .feature h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width: 760px/*solution makes this 600px*/) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 0 1rem;
+  }
+
+  /*solution adds
+  .feature .content {
+    padding: 1.25rem 0 1.875rem 0;}*/
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding: 4rem 1%;/*solution has it at 4rem 0*/
+  background-color: #4a4a4a;
+}
+
+#filters-section .content {
+  padding: 0 0.625rem;
+  margin-bottom: 5rem;
+  /*added but not in solution*/
+  width: 50%;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+#filters-section .images-container {
+  max-width: 100%;
+  padding: 0 1%;
+  /*added*/
+  display: inline-flex;/*solution calls flex*/
+}
+
+@media only screen and (max-width: 760px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+
+  #filters-section .content h2 {
+    padding-bottom: .625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  #filters-section .content h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+/* Quotes Section */
+
+#quotes-section {
+  background-color: #f3f3f3;
+  /*added but not in solution*/
+  padding: 5rem 0;
+}
+
+#quotes-section content {
+  padding: 5rem 0;
+  /*solution does this:
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;*/
+}
+
+#quotes-section .quote {
+  padding-right: 1.875rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+#quotes-section .quote-citation {
+  height: 1.875rem;
+}
+
+/*solution adds this:
+@media only screen and (max-width: 895px) {
+  #quotes-section .content {
+    padding: 3rem 1.5rem;
+  }*/
+
+
+@media only screen and (max-width: 760px /* solution has this at 600px*/) {
+  #quotes-section content {
+    padding: 1.875rem .625rem;
+    /*solution adds
+    flex-flow: column; */
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  #quotes-section .quote-citation {
+    display: block;
+    padding-top: 1rem;
+    margin: auto;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 1.5rem 2rem;
+}
+
+footer .content {
+  color: #ffffff;
+  display: flex;
+  font-size: 0.75rem;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 760px) {
+  footer .content {
+    font-size: .625rem;
+  }
+}
